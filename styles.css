@@ -30,7 +30,7 @@ header > div > button {
 main {
   position: relative;
   flex: 1;
-  /* background-color: gray; */
+  background-color: aliceblue;
 }
 main > form {
   position: absolute;
@@ -97,7 +97,7 @@ form label {
   z-index: 10;
 }
 .lib-book {
-  background-color: lightgray;
+  box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.4);
   padding: 10px;
   display: flex;
   flex-direction: column;
