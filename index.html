@@ -10,10 +10,10 @@
   <body>
     <header>
       <h1>My Library</h1>
-      <div><button>Add Book</button></div>
+      <div id="open-book-form"><button>Add Book</button></div>
     </header>
     <main>
-      <form>
+      <form id="book-adding-form">
         <div class="form-controls">
           <div class="form-control">
             <label for="title">Title<span aria-label="required">*</span></label>
@@ -56,9 +56,10 @@
         </div>
         <div class="form-buttons">
           <button type="submit">Add</button>
-          <button>Cancel</button>
+          <button id="close-book-form">Cancel</button>
         </div>
       </form>
     </main>
+    <script src="./index.js"></script>
   </body>
 </html>
