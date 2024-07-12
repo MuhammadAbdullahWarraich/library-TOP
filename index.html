@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css-reset.css" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>My Library</h1>
+      <div><button>Add Book</button></div>
+    </header>
+    <main>
+      <form>
+        <div class="form-controls">
+          <div class="form-control">
+            <label for="title">Title<span aria-label="required">*</span></label>
+            <input
+              type="text"
+              id="title"
+              name="title"
+              pattern="([A-Za-z\d]+\s)*[A-Za-z\d]+"
+              required
+            />
+          </div>
+
+          <div class="form-control">
+            <label for="author-input"
+              >Author <span aria-label="required">*</span></label
+            >
+            <input
+              type="text"
+              id="author"
+              name="author"
+              pattern="([A-Za-z]+\s)*[A-Za-z]+"
+              required
+            />
+          </div>
+          <div class="form-control">
+            <label for="noOfPages">Number of Pages</label>
+            <input
+              type="number"
+              inputmode="numeric"
+              id="noOfPages"
+              name="noOfPages"
+            />
+          </div>
+          <div class="form-control">
+            <input type="checkbox" name="haveIRead" id="read-bool" />
+            <label for="read-bool"
+              >I have read this book <span aria-label="required">*</span></label
+            >
+          </div>
+        </div>
+        <div class="form-buttons">
+          <button type="submit">Add</button>
+          <button>Cancel</button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
