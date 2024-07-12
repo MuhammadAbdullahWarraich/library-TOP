@@ -41,5 +41,6 @@ bookForm.addEventListener("submit", (e) =>{
         book[attrName] = attrValue;
     }
     addBookToLibrary(book);
+    bookForm.classList.remove('is-open');
     e.preventDefault();
 });
