@@ -60,7 +60,8 @@ function toggleReadStatus(button) {
 
 function removeFromLibrary(bookDiv) {
     bookDiv.remove();
-    let i = myLibrary.indexOf(bookDiv);
+    let i = myLibrary.findIndex(el => el.title === bookDiv.querySelector("h3").textContent);
+    console.log(i);
     if (-1 !== i) {
         myLibrary.splice(i, 1);
         const emptyMessage = document.querySelector("#no-books");
