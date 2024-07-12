@@ -13,7 +13,7 @@ header {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  padding: 20px;
+  padding: 20px 0px;
   background-color: darkblue;
   color: white;
 }
@@ -95,4 +95,32 @@ form label {
 .is-open {
   opacity: 1;
   z-index: 10;
+}
+.lib-book {
+  background-color: lightgray;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.have-read-this {
+  background-color: rgba(0, 128, 0, 0.6);
+}
+.not-read-yet {
+  background-color: white;
+}
+.remove-book {
+  background-color: rgba(255, 0, 0, 0.6);
+}
+#book-container {
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 400px));
+  gap: 20px;
+}
+div:has(> #book-container) {
+  display: grid;
+  justify-items: stretch;
+  justify-content: center;
+  padding: 30px 0px;
 }
