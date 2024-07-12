@@ -112,15 +112,16 @@ form label {
 .remove-book {
   background-color: rgba(255, 0, 0, 0.6);
 }
+div:has(> #book-container) {
+  display: grid;
+  justify-items: stretch;
+  justify-content: center;
+  grid-template-columns: max(100%, 300px);
+  padding: 30px 0px;
+}
 #book-container {
   max-width: 1000px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 400px));
   gap: 20px;
-}
-div:has(> #book-container) {
-  display: grid;
-  justify-items: stretch;
-  justify-content: center;
-  padding: 30px 0px;
 }
