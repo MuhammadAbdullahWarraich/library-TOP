@@ -64,6 +64,8 @@ function removeFromLibrary(bookDiv) {
     console.log(i);
     if (-1 !== i) {
         myLibrary.splice(i, 1);
+    }
+    if (myLibrary.length === 0) {
         const emptyMessage = document.querySelector("#no-books");
         emptyMessage.style.display = "block";
     }
