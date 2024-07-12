@@ -21,3 +21,25 @@ openBookForm.addEventListener('click', () =>{
 closeBookForm.addEventListener('click', () =>{
     bookForm.classList.remove('is-open');
 });
+
+function addBookToLibrary(book) {
+    myLibrary.push(new Book(book.title, book.author, book.noOfPages, book.haveIRead));
+    console.log(myLibrary);
+}
+
+bookForm.addEventListener("submit", (e) =>{
+    let book = {};
+    let attrCount = e.target.length;
+    for (let i = 0; i < attrCount; i++) {
+        let attrName = e.target[i].name;
+        let attrValue;
+        if (e.target[i].type === "checkbox") {
+            attrValue = e.target[i].checked;
+        } else {
+            attrValue = e.target[i].value;
+        }
+        book[attrName] = attrValue;
+    }
+    addBookToLibrary(book);
+    e.preventDefault();
+});
