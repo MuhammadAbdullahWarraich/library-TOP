@@ -26,7 +26,6 @@ closeBookForm.addEventListener('click', () =>{
 function addBookToLibrary(book) {
     myLibrary.push(new Book(book.title, book.author, book.noOfPages, book.haveIRead));
     renderBook(myLibrary.length - 1);
-    console.log(myLibrary);
 }
 
 bookForm.addEventListener("submit", (e) =>{
@@ -62,7 +61,6 @@ function toggleReadStatus(button) {
 function removeFromLibrary(bookDiv) {
     bookDiv.remove();
     let i = myLibrary.findIndex(el => el.title === bookDiv.querySelector("h3").textContent);
-    console.log(i);
     if (-1 !== i) {
         myLibrary.splice(i, 1);
     }
